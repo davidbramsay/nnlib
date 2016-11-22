@@ -1,0 +1,20 @@
+//ignore this line and any line starting with //
+//
+//this is a test training set for our neural network
+//values are separated by spaces, input output values seperated by a comma,
+//each row is on a new line
+
+//input  output:
+//[3 4 5]  [9 5]
+//[2 0 3]  [3 4]
+//[4 0 7]  [7 7]
+
+//3 4 5, 9 5
+//2 0 3,3 4
+//4 0 7   ,7 7
+
+-.4 -.1 0, 1 0
+.5 0 0, 0 1
+.3 -.1 -.2, 0 1
+-1 .4 .5, 1 0
+
