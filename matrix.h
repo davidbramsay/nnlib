@@ -33,8 +33,8 @@ matrix_t *m_maxind(matrix_t *matrix); //index of largest abs in each row
 
 double m_dmaxval(matrix_t *matrix); //find largest abs in all of matrix
 
-matrix_t *m_getrow(matrix_t *matrix, int row); //return matrix of row [1][num_cols]
-matrix_t *m_getcol(matrix_t *matrix, int col); //return vector of col [num_rows][1]
+matrix_t *m_getrow(matrix_t *matrix, int row); //return matrix of row [i][1:num_cols]
+matrix_t *m_getcol(matrix_t *matrix, int col); //return vector of col [1:num_rows][i]
 
 matrix_t *m_multi(matrix_t *matrix1, matrix_t *matrix2); //standard matrix multiplication
 
