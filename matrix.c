@@ -114,6 +114,18 @@ void m_free(matrix_t *matrix){
 
 
 
+void m_randomize_vals(matrix_t *matrix, int upper, int lower){
+//fill matrix will random values between lower and upper
+
+    srand(time(NULL));
+
+    for (int i = 0; i < matrix->num_rows; i++)
+        for (int j = 0; j < matrix->num_cols; j++)
+            matrix->vals[i][j] = ((double)(upper-lower) * (double)rand() / RAND_MAX) + lower;
+}
+
+
+
 matrix_t *m_transpose(matrix_t *matrix){
 //transpose a matrix
     matrix_t *result_matrix = m_init(matrix->num_cols, matrix->num_rows);

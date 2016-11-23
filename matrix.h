@@ -18,8 +18,11 @@ typedef struct matrix{
 matrix_t *m_init(int num_rows, int num_cols);
 matrix_t *m_init_array(double *array[], int num_rows, int num_cols);
 matrix_t *m_copy(matrix_t *matrix);
+
 void m_copy_into(matrix_t *src, matrix_t *dest);
 void m_free(matrix_t *matrix);
+
+void m_randomize_vals(matrix_t *matrix, int upper, int lower);
 
 //operations that result in new matricies or values
 matrix_t *m_transpose(matrix_t *matrix); //transpose matrix

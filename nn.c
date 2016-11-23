@@ -49,24 +49,12 @@ double d_tanh(double val){
 
 
 
-void m_randomize_weights(matrix_t *matrix, int upper, int lower){
-//fill matrix will random values between lower and upper
-
-    srand(time(NULL));
-
-    for (int i = 0; i < matrix->num_rows; i++)
-        for (int j = 0; j < matrix->num_cols; j++)
-            matrix->vals[i][j] = ((double)(upper-lower) * (double)rand() / RAND_MAX) + lower;
-}
-
-
-
 void nn_randomize_weights(net_t *net, int upper, int lower){
 //fill all weight matrices in a nn object with random values between lower and
 //upper
 
     for (int i = 1; i < net->num_layers; i++){
-        m_randomize_weights(net->layers[i].W, upper, lower);
+        m_randomize_vals(net->layers[i].W, upper, lower);
     }
 }
 
